@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap'); // sass-lint:disable-line no-url-domains, no-url-protocols
+
+$body-font-family: 'Nunito Sans', sans-serif;
+$color-text: #333;
+$light-grey: #ccc;
+$button-primary-color: #574500;
+$button-left-color: #faff8c;
+$button-left-hover-color: #f3ff14;
+$button-right-color: #8cff9b;
+$button-right-hover-color: #1ef83b;
+$error-message-color: #fc5555;
+
+
+body {
+  color: $color-text;
+  font-family: $body-font-family;
+  font-size: 1.2em;
+  padding: 0 30px;
+  text-align: center;
+  transition: all  ease-in-out .4s; // sass-lint:disable-line no-transition-all
+}
+
+.container {
+  margin: 0 auto;
+  width: 60%;
+}
+
+.form-area {
+  margin-top: 50px;
+}
+
+input,
+select,
+button {
+  border: 1px solid $light-grey;
+  border-radius: 10px;
+  box-sizing: border-box;
+  display: block;
+  font-family: inherit;
+  font-size: 1.4em;
+  margin: 5px 0;
+  padding: 20px 50px;
+  width: 100%;
+}
+
+select {
+  -webkit-appearance: none; // sass-lint:disable-line no-vendor-prefixes
+  background: url('../img/angle-down-solid.svg') no-repeat  95% 50%;
+}
+
+button {
+  border: 0;
+  color: $button-primary-color;
+  cursor: pointer;
+  display: inline-block;
+  transition: all  ease-in-out .4s; // sass-lint:disable-line no-transition-all
+  width: 280px;
+}
+
+.left {
+  background: $button-left-color;
+  float: left;
+
+  &:hover {
+    background: $button-left-hover-color;
+  }
+}
+
+.right {
+  background: $button-right-color;
+  float: right;
+  right: 0;
+
+  &:hover {
+    background: $button-right-hover-color;
+  }
+}
+
+.nav-button {
+  border-top: 2px solid $light-grey;
+  bottom: 50px;
+  display: block;
+  margin: 0 auto;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.input-group {
+  height: 500px;
+}
+
+.selected-plan {
+  background: $button-right-hover-color;
+}
+
+.error-message {
+  color: $error-message-color;
+}
